@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wordle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="600" Width="600" Background="#FF313131">
     <Window.Resources>
         <ControlTemplate x:Key="CharBlockTemplate" TargetType="{x:Type ContentControl}">
-            <Grid>
+            <Grid Background="#FFF7F7F7">
                 <Rectangle HorizontalAlignment="Stretch" Stroke="Black" VerticalAlignment="Stretch"
                        Fill="{TemplateBinding Background}" />
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -42,7 +42,7 @@
         </Grid.ColumnDefinitions>
         <ContentControl Template="{DynamicResource CharBlockTemplate}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,5"/>
         <TextBox x:Name="textInput" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" MaxLines="1" Height="36" Grid.Row="6" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Width="204" UndoLimit="5"/>
-        <Button Grid.Column="0" Grid.ColumnSpan="5" Content="Submit" HorizontalAlignment="Center" Height="36" Grid.Row="7" VerticalAlignment="Center" Width="204" Click="Button_Click"/>
+        <Button Grid.Column="0" Grid.ColumnSpan="5" Content="Submit" HorizontalAlignment="Center" Height="36" Grid.Row="7" VerticalAlignment="Center" Width="204" Click="Button_Click" Background="#FF3EBDFF" FontSize="24" FontWeight="Bold"/>
 
     </Grid>
 </Window>
