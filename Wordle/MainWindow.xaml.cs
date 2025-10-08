@@ -70,7 +70,7 @@ namespace Wordle
         {
             string tekst = textInput.Text;
 
-            if (tekst.Length != 5 || Regex.IsMatch(tekst, @"\d"))
+            if (tekst.Length != 5 || Regex.IsMatch(tekst, @"\d") || tekst.Any(char.IsWhiteSpace))
             {
                 MessageBox.Show($"Błąd! {tekst} nie jest prawidłowym słowem");
                 return;
@@ -130,6 +130,7 @@ namespace Wordle
                 return;
             }
 
+            textInput.Text = "";
             stage++;
         }
     }
