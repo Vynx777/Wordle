@@ -9,9 +9,10 @@
     <Window.Resources>
         <ControlTemplate x:Key="CharBlockTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
-                <Rectangle HorizontalAlignment="Stretch" Stroke="Black" VerticalAlignment="Stretch"/>
+                <Rectangle HorizontalAlignment="Stretch" Stroke="Black" VerticalAlignment="Stretch"
+                       Fill="{TemplateBinding Background}" />
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
-                  Content="{TemplateBinding Content}">
+                              Content="{TemplateBinding Content}">
                     <ContentPresenter.ContentTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding}" FontSize="42" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -40,7 +41,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <ContentControl Template="{DynamicResource CharBlockTemplate}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,5"/>
-        <TextBox Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" Height="36" Grid.Row="6" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" Text="TextBox" VerticalAlignment="Center" Width="204"/>
+        <TextBox x:Name="textInput" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" MaxLines="1" Height="36" Grid.Row="6" TextWrapping="Wrap" TextAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Width="204" UndoLimit="5"/>
         <Button Grid.Column="0" Grid.ColumnSpan="5" Content="Submit" HorizontalAlignment="Center" Height="36" Grid.Row="7" VerticalAlignment="Center" Width="204" Click="Button_Click"/>
 
     </Grid>
