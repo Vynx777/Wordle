@@ -23,7 +23,7 @@ namespace Wordle
     {
 
         private int stage = 0;
-        private string answerText = "pedał";
+        private string answerText = "mleko";
         private ContentControl[,] charBlocks;
         public MainWindow()
         {
