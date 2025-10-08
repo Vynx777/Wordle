@@ -1,3 +1,7 @@
+# Wordle App
+![C#](https://img.shields.io/badge/Language-C%23-blue)
+![Desktop App](https://img.shields.io/badge/Type-Destkop_App-green)
+
 2. Open the solution in Visual Studio 2022.
 3. Build the project (__Build > Build Solution__).
 4. Run the application (__Debug > Start Debugging__ or F5).
